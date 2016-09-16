@@ -3,10 +3,14 @@ package com.github.denisura.kandone;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
+import com.github.denisura.kandone.ui.dialog.SaveTaskDialogFragment;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -33,6 +37,22 @@ public class MainActivity extends SingleFragmentActivity {
     public void onFabCLick(View view) {
         Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show();
+////        FragmentManager fm = getSupportFragmentManager();
+////        EditNameDialogFragment editNameDialogFragment = EditNameDialogFragment.newInstance("Some Title");
+////        editNameDialogFragment.show(fm, "fragment_edit_name");
+//
+//
+////        EditNameDialogFragment editNameDialogFragment = new EditNameDialogFragment();
+//        EditNameDialogFragment editNameDialogFragment = EditNameDialogFragment.newInstance("Some Title");
+//        editNameDialogFragment.setStyle(DialogFragment.STYLE_NORMAL, R.style.Dialog_FullScreen);
+//        editNameDialogFragment.show(getSupportFragmentManager(), "fragment_edit_name");
+
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        SaveTaskDialogFragment newFragment = SaveTaskDialogFragment.newAddInstance();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        transaction.add(android.R.id.content, newFragment).addToBackStack(null).commit();
 
     }
 

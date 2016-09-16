@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Kandone</string>
     <string name="action_settings">Settings</string>
+
+    <string name="prompt_task">Task</string>
+    <string name="prompt_notes">Notes</string>
+    <string name="prompt_due_date">Due date:</string>
+    <string name="prompt_completed_date">Completed on:</string>
+    <string name="pick_due_date">Pick due date</string>
+
 </resources>
