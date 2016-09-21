@@ -5,6 +5,8 @@ import android.app.Application;
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
 
+import net.danlew.android.joda.JodaTimeAndroid;
+
 import timber.log.Timber;
 
 public class KandoneApplication extends Application {
@@ -28,5 +30,6 @@ public class KandoneApplication extends Application {
         _refWatcher = LeakCanary.install(this);
 
         Timber.plant(new Timber.DebugTree());
+        JodaTimeAndroid.init(this);
     }
 }

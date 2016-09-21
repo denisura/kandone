@@ -16,6 +16,8 @@ import com.github.denisura.kandone.KandoneApplication;
 import com.github.denisura.kandone.R;
 import com.squareup.leakcanary.RefWatcher;
 
+import org.joda.time.LocalDate;
+
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -70,11 +72,14 @@ public class DatePickerFragment extends DialogFragment {
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+
+
                         int year = mDatePicker.getYear();
                         int month = mDatePicker.getMonth();
                         int day = mDatePicker.getDayOfMonth();
                         Date date = new GregorianCalendar(year, month, day).getTime();
-                        sendResult(Activity.RESULT_OK, date);
+                        LocalDate localDate = LocalDate.fromDateFields(date);
+                        sendResult(Activity.RESULT_OK, localDate);
                     }
                 })
                 .create();
@@ -89,7 +94,7 @@ public class DatePickerFragment extends DialogFragment {
     }
 
 
-    private void sendResult(int resultCode, Date date) {
+    private void sendResult(int resultCode, LocalDate date) {
         if (getTargetFragment() == null) {
             return;
         }

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="@dimen/cardview_default_elevation"
+    card_view:cardUseCompatPadding="false"
+    card_view:contentPadding="8dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/task"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_toEndOf="@+id/checkBox"
+            android:layout_toRightOf="@+id/checkBox"
+            android:textSize="16sp"
+            tools:text="Create Todo List something very very very very very very vey loooong" />
+
+        <TextView
+            android:id="@+id/dueDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/task"
+            android:layout_alignStart="@+id/task"
+            android:layout_below="@+id/task"
+            android:textSize="12sp"
+            tools:text="Due today" />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/task"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:textSize="12sp"
+            tools:text="Priority Score: 1" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:paddingLeft="8dp" />
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

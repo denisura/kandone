@@ -1,11 +1,49 @@
-<resources>
+<resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
     <string name="app_name">Kandone</string>
     <string name="action_settings">Settings</string>
 
     <string name="prompt_task">Task</string>
     <string name="prompt_notes">Notes</string>
     <string name="prompt_due_date">Due date:</string>
+    <string name="format_due_date">Due date: <xliff:g id="duedate">%1$s</xliff:g></string>
+    <string name="format_done_date">Completed on: <xliff:g id="duedate">%1$s</xliff:g></string>
+    <string name="format_priority_score">Priority score: <xliff:g id="score">%1$d</xliff:g></string>
+
     <string name="prompt_completed_date">Completed on:</string>
     <string name="pick_due_date">Pick due date</string>
+
+    <!-- Content provider related -->
+    <string name="app_content_authority" translatable="false">com.github.denisura.kandone</string>
+
+    <string name="format_due_today">Due today</string>
+
+    <plurals name="format_due_in_days">
+        <item quantity="one">Due tomorrow</item>
+        <item quantity="other">Due in <xliff:g id="days">%1$d</xliff:g> days </item>
+    </plurals>
+
+    <plurals name="format_due_in_months">
+        <item quantity="one">Due in a month</item>
+        <item quantity="other">Due in <xliff:g id="days">%1$d</xliff:g> months </item>
+    </plurals>
+
+    <plurals name="overdue_days">
+        <item quantity="one">Overdue <xliff:g id="days">%1$d</xliff:g> day</item>
+        <item quantity="other">Overdue <xliff:g id="days">%1$d</xliff:g> days </item>
+    </plurals>
+
+    <plurals name="overdue_months">
+        <item quantity="one">Overdue <xliff:g id="days">%1$d</xliff:g> month </item>
+        <item quantity="other">Overdue <xliff:g id="days">%1$d</xliff:g> months</item>
+    </plurals>
+
+    <string name="dialog_title_add">Add Task</string>
+    <string name="dialog_title_edit">Edit Task</string>
+    <string name="dialog_title_show">Task Details</string>
+
+    <string name="dialog_action_edit">Edit</string>
+    <string name="dialog_action_back">Back</string>
+    <string name="dialog_action_check">Check</string>
+    <string name="dialog_action_uncheck">Uncheck</string>
 
 </resources>
